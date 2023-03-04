@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{/css/form.css}"/>
+</head>
+<body>
+<!--<h1>Result</h1>-->
+<!--    &lt;!&ndash;    <p>Id: <input type="text" th:field="*{id}" /></p>&ndash;&gt;-->
+<!--    <p>Long URL: <input type="text" th:field="*{url.long_url}" /></p>-->
+<!--    <p>Short URL: <input type="text" th:field="*{url.short_url}" /></p>-->
+<!--    <a href="/">Submit another message</a>-->
+<!--</form>-->
+
+
+<div class="form-style-2">
+    <div class="form-style-2-heading">Click.me</div>
+    <form action="">
+        <label for="long_url"><span>Long URL</span>
+<!--            <input type="text"   class="input-field" name="long_url" value="*{url.long_url}"  id="long_url"/>-->
+            <input type="text" class="input-field" th:field="*{url.long_url}" id="long_url"/>
+        </label>
+        <label for="short_url"><span>Short URL</span>
+<!--                    <input type="text" class="input-field" name="short_url" value="" th:value="${short_url}" id="short_url"/>-->
+                    <input type="text" class="input-field" th:field="*{url.short_url}" id="short_url"/>
+        </label>
+        <input href="/" type="submit" th:method="get" value="Go to Homepage"></input>
+<!--        href="https://google.com" class="button"-->
+<!--        <form href="/" method="get">-->
+<!--            <input type="submit" value="Go to homepage" />-->
+<!--        </form>-->
+</div>
+
+<!--<label><span> </span><input type="submit" value="Shorten" />-->
+<!--    </span><input type="reset" value="Reset" />-->
+<!--</label>-->
+</form>
+</div>
+
+
+</body>
+</html>
